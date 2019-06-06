@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     ## ADD YOUR APPS HERE #######
     'example',
+    'turt',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +123,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# SETTINGS FOR PYTHON ANYWHERE TO WORK 
+# SETTINGS FOR PYTHON ANYWHERE TO WORK
 ALLOWED_HOSTS = ['*']
