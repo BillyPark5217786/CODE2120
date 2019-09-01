@@ -3,10 +3,11 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 import json
 from .models import *
+import os, sys
 
 # Create your views here.
 
-def example_get(request, var_a, var_b):
+def seaquest(request, var_a, var_b):
 	try:
 		returnob = {
 		"data": "%s batman: %s chicken!!!" %(var_a, var_b),
@@ -20,7 +21,7 @@ def example_get(request, var_a, var_b):
 		return JsonResponse({"isError": True, "error":str(e), "errorType":errorType, "function":fname, "line":exc_tb.tb_lineno, "log":log})
 
 @csrf_exempt
-def example_post(request):
+def posts(request):
 	log = []
 	if request.method == "POST":
 		try:
@@ -41,7 +42,7 @@ def example_post(request):
 		return HttpResponse("ONLY POST REQUESTS")
 
 @csrf_exempt
-def nip(request):
+def elf(request):
 	jsob = {"startNumber":0, "length": 10}
 	log = []
 	if request.method == "POST":

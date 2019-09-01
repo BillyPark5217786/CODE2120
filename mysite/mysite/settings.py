@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     ## ADD YOUR APPS HERE #######
     'example',
     'turt',
+    'uncle',
 ]
 
 MIDDLEWARE = [
